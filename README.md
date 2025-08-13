@@ -1,2 +1,2 @@
 # hornback-communications
-digital brochure for honback communications
+digital brochure for hornback communications
