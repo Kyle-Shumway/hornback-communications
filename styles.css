@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Text:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;600&display=swap');
 
 * {
     margin: 0;
@@ -7,10 +7,10 @@
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
     line-height: 1.7;
-    color: #1a1a1a;
-    background: #ffffff;
+    color: #1c1c1c;
+    background: #f2f4f4;
 }
 
 /* Refined animations */
@@ -42,8 +42,8 @@ body {
 
 /* Header Section - Executive Style */
 .header {
-    background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
-    color: white;
+    background: #1197c1;
+    color: #f2f4f4;
     padding: 80px 0 120px;
     position: relative;
 }
@@ -58,33 +58,25 @@ body {
     background: linear-gradient(90deg, transparent, #64748b, transparent);
 }
 
-.header h1 {
-    font-family: 'Crimson Text', serif;
-    font-size: 3.5rem;
-    font-weight: 400;
+.header .logo-container {
+    display: inline-block;
     margin-bottom: 20px;
-    letter-spacing: -1px;
     animation: slideInFromLeft 0.8s ease;
-    text-align: left;
 }
 
-.header .tagline {
-    font-size: 1.1rem;
-    font-weight: 500;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    animation: slideInFromLeft 0.8s ease 0.2s both;
-    color: #94a3b8;
-    margin-bottom: 10px;
-    text-align: left;
+.header .main-logo {
+    height: 120px;
+    width: auto;
+    display: block;
 }
 
 .header .location {
     font-size: 0.95rem;
-    font-weight: 400;
-    color: #cbd5e1;
+    font-weight: 300;
+    color: #f2f4f4;
     animation: slideInFromLeft 0.8s ease 0.4s both;
     text-align: left;
+    margin-top: 20px;
 }
 
 /* About Section - Clean Professional */
@@ -95,9 +87,9 @@ body {
 }
 
 .about h2 {
-    font-family: 'Crimson Text', serif;
+    font-family: 'Josefin Sans', sans-serif;
     font-size: 2.75rem;
-    color: #0f172a;
+    color: #1197c1;
     margin-bottom: 50px;
     text-align: left;
     font-weight: 600;
@@ -113,23 +105,23 @@ body {
     transform: translateY(-50%);
     width: 40px;
     height: 3px;
-    background: #64748b;
+    background: #83cbdb;
 }
 
 .about p {
     font-size: 1.2rem;
     text-align: left;
     max-width: 800px;
-    color: #475569;
+    color: #1c1c1c;
     line-height: 1.8;
-    font-weight: 400;
+    font-weight: 300;
     margin: 0;
 }
 
 /* Owner Section - Professional Bio */
 .owner {
     padding: 80px 0;
-    background: #ffffff;
+    background: #f2f4f4;
 }
 
 .owner-content {
@@ -159,19 +151,19 @@ body {
 }
 
 .owner-text h2 {
-    font-family: 'Crimson Text', serif;
+    font-family: 'Josefin Sans', sans-serif;
     font-size: 2.5rem;
-    color: #0f172a;
+    color: #1197c1;
     margin-bottom: 10px;
     font-weight: 600;
 }
 
 .owner-text h3 {
     font-size: 1.1rem;
-    color: #64748b;
+    color: #83cbdb;
     margin-bottom: 40px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -179,7 +171,7 @@ body {
 .owner-text p {
     font-size: 1.05rem;
     line-height: 1.7;
-    color: #475569;
+    color: #1c1c1c;
     margin-bottom: 25px;
 }
 
@@ -191,10 +183,10 @@ body {
 
 .services h2 {
     font-size: 2.5rem;
-    color: #0f172a;
+    color: #1197c1;
     margin-bottom: 60px;
     text-align: left;
-    font-family: 'Crimson Text', serif;
+    font-family: 'Josefin Sans', sans-serif;
     font-weight: 600;
     padding-left: 60px;
     position: relative;
@@ -208,7 +200,7 @@ body {
     transform: translateY(-50%);
     width: 40px;
     height: 3px;
-    background: #64748b;
+    background: #83cbdb;
 }
 
 .services-grid {
@@ -252,7 +244,7 @@ body {
 
 .service-card h3 {
     font-size: 1.4rem;
-    color: #0f172a;
+    color: #1197c1;
     margin-bottom: 15px;
     font-weight: 600;
     position: relative;
@@ -260,26 +252,26 @@ body {
 }
 
 .service-card p {
-    color: #64748b;
+    color: #1c1c1c;
     line-height: 1.6;
     position: relative;
     z-index: 1;
     font-size: 1.05rem;
 }
 
-/* Clients Section - Structured Grid */
+/* Clients Section - Grid Layout */
 .clients {
     padding: 80px 0;
-    background: #f8fafc;
-    border-top: 1px solid #e2e8f0;
+    background: #f2f4f4;
+    border-top: 1px solid #1197c1;
 }
 
 .clients h2 {
     font-size: 2.5rem;
-    color: #0f172a;
+    color: #1197c1;
     margin-bottom: 60px;
     text-align: left;
-    font-family: 'Crimson Text', serif;
+    font-family: 'Josefin Sans', sans-serif;
     font-weight: 600;
     padding-left: 60px;
     position: relative;
@@ -293,24 +285,33 @@ body {
     transform: translateY(-50%);
     width: 40px;
     height: 3px;
-    background: #64748b;
+    background: #83cbdb;
 }
 
 .client-types {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 300px));
+    gap: 30px;
     margin-top: 40px;
-    background: #e2e8f0;
+    align-items: stretch;
+    justify-content: center;
 }
 
 .client-type {
     background: #ffffff;
-    color: #0f172a;
+    color: #1197c1;
     padding: 40px 30px;
-    text-align: left;
+    text-align: center;
     transition: all 0.3s ease;
     position: relative;
+    border-radius: 12px;
+    border: 2px solid #83cbdb;
+    box-shadow: 0 4px 20px rgba(17, 151, 193, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 150px;
 }
 
 .client-type::before {
@@ -319,31 +320,42 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    height: 3px;
-    background: #64748b;
-    transform: scaleX(0);
-    transition: transform 0.3s ease;
+    bottom: 0;
+    background: linear-gradient(135deg, #1197c1, #83cbdb);
+    opacity: 0;
+    border-radius: 10px;
+    transition: opacity 0.3s ease;
+    z-index: 0;
 }
 
 .client-type:hover::before {
-    transform: scaleX(1);
+    opacity: 0.1;
 }
 
 .client-type:hover {
-    background: #f1f5f9;
+    transform: translateY(-8px);
+    box-shadow: 0 8px 30px rgba(17, 151, 193, 0.2);
+    border-color: #1197c1;
 }
 
 .client-type h3 {
-    font-size: 1.3rem;
-    margin-bottom: 15px;
+    font-size: 1.5rem;
+    margin: 0 0 15px 0;
     font-weight: 600;
-    color: #0f172a;
+    color: #1197c1;
+    position: relative;
+    z-index: 1;
+    line-height: 1.3;
 }
 
 .client-type p {
-    font-size: 1rem;
-    color: #64748b;
-    line-height: 1.6;
+    font-size: 1.1rem;
+    color: #1c1c1c;
+    line-height: 1.4;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+    font-weight: 300;
 }
 
 /* Values Section - Timeline Style */
@@ -354,10 +366,10 @@ body {
 
 .values h2 {
     font-size: 2.5rem;
-    color: #0f172a;
+    color: #1197c1;
     margin-bottom: 60px;
     text-align: left;
-    font-family: 'Crimson Text', serif;
+    font-family: 'Josefin Sans', sans-serif;
     font-weight: 600;
     padding-left: 60px;
     position: relative;
@@ -371,7 +383,7 @@ body {
     transform: translateY(-50%);
     width: 40px;
     height: 3px;
-    background: #64748b;
+    background: #83cbdb;
 }
 
 .values-grid {
@@ -389,7 +401,7 @@ body {
     top: 0;
     bottom: 0;
     width: 2px;
-    background: #e2e8f0;
+    background: #1197c1;
 }
 
 .value-item {
@@ -398,27 +410,38 @@ body {
     position: relative;
 }
 
-.value-item::before {
-    content: '';
+.testimonial-image {
     position: absolute;
-    left: 22px;
+    left: 0;
     top: 0;
-    width: 16px;
-    height: 16px;
-    background: #64748b;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
-    z-index: 1;
+    overflow: hidden;
+    background: #ffffff;
+    border: 2px solid #83cbdb;
+}
+
+.testimonial-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.value-item::before {
+    display: none;
 }
 
 .value-item h3 {
     font-size: 1.4rem;
-    color: #0f172a;
+    color: #1197c1;
     margin-bottom: 15px;
     font-weight: 600;
 }
 
 .value-item p {
-    color: #64748b;
+    color: #1c1c1c;
     line-height: 1.7;
     font-size: 1.05rem;
 }
@@ -426,8 +449,8 @@ body {
 /* Contact Section - Professional Consultation Layout */
 .contact {
     padding: 80px 0;
-    background: #0f172a;
-    color: white;
+    background: #1c1c1c;
+    color: #f2f4f4;
     position: relative;
 }
 
@@ -438,11 +461,11 @@ body {
     left: 0;
     right: 0;
     height: 1px;
-    background: linear-gradient(90deg, transparent, #64748b, transparent);
+    background: linear-gradient(90deg, transparent, #83cbdb, transparent);
 }
 
 .contact h2 {
-    font-family: 'Crimson Text', serif;
+    font-family: 'Josefin Sans', sans-serif;
     font-size: 2.8rem;
     margin-bottom: 60px;
     text-align: left;
@@ -459,7 +482,7 @@ body {
     transform: translateY(-50%);
     width: 40px;
     height: 3px;
-    background: #64748b;
+    background: #83cbdb;
 }
 
 /* Contact Methods Grid */
@@ -473,28 +496,28 @@ body {
 }
 
 .contact-method {
-    background: #1e293b;
+    background: #1c1c1c;
     border-radius: 8px;
     padding: 40px;
-    border: 1px solid #334155;
+    border: 1px solid #83cbdb;
 }
 
 .method-header {
     margin-bottom: 40px;
     padding-bottom: 30px;
-    border-bottom: 1px solid #334155;
+    border-bottom: 1px solid #83cbdb;
 }
 
 .method-header h3 {
     font-size: 1.5rem;
     margin-bottom: 15px;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
     font-weight: 600;
-    color: #e2e8f0;
+    color: #f2f4f4;
 }
 
 .method-header p {
-    color: #94a3b8;
+    color: #83cbdb;
     line-height: 1.6;
     font-size: 1rem;
 }
@@ -511,7 +534,7 @@ body {
     flex-direction: column;
     gap: 8px;
     padding: 20px 0;
-    border-bottom: 1px solid #334155;
+    border-bottom: 1px solid #83cbdb;
 }
 
 .detail-item:last-child {
@@ -520,22 +543,22 @@ body {
 
 .detail-label {
     font-size: 0.85rem;
-    color: #94a3b8;
+    color: #1197c1;
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .detail-value {
     font-size: 1.1rem;
-    font-weight: 400;
-    color: #e2e8f0;
+    font-weight: 300;
+    color: #f2f4f4;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .detail-value:hover {
-    color: #cbd5e1;
+    color: #1197c1;
 }
 
 /* Consultation Form */
@@ -557,8 +580,8 @@ body {
 .form-group label {
     display: block;
     margin-bottom: 10px;
-    font-weight: 500;
-    color: #cbd5e1;
+    font-weight: 600;
+    color: #1197c1;
     font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -569,13 +592,13 @@ body {
 .form-group select {
     width: 100%;
     padding: 15px 18px;
-    border: 1px solid #475569;
+    border: 1px solid #83cbdb;
     border-radius: 6px;
-    background: #334155;
-    color: #e2e8f0;
+    background: #1c1c1c;
+    color: #f2f4f4;
     font-size: 1rem;
     transition: all 0.3s ease;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 .form-footer {
@@ -586,7 +609,7 @@ body {
 
 .form-footer p {
     font-size: 0.9rem;
-    color: #94a3b8;
+    color: #1197c1;
     line-height: 1.6;
     margin: 0;
     font-style: italic;
@@ -594,17 +617,17 @@ body {
 
 .form-group select {
     appearance: none;
-    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 5"><path fill="%2394a3b8" d="m0 1 2 2 2-2z"/></svg>');
+    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 5"><path fill="%231197c1" d="m0 1 2 2 2-2z"/></svg>');
     background-repeat: no-repeat;
     background-position: right 18px center;
     background-size: 12px;
     cursor: pointer;
-    font-weight: 400;
+    font-weight: 300;
 }
 
 .form-group select:hover {
-    border-color: #64748b;
-    background-color: #475569;
+    border-color: #83cbdb;
+    background-color: #1c1c1c;
 }
 
 .form-group select option {
@@ -623,7 +646,7 @@ body {
 .form-group select option:checked,
 .form-group select option:selected {
     background: #64748b;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .form-group select option[value=""] {
@@ -641,14 +664,14 @@ body {
 .form-group textarea:focus,
 .form-group select:focus {
     outline: none;
-    border-color: #64748b;
-    background: #475569;
-    box-shadow: 0 0 0 3px rgba(100, 116, 139, 0.1);
+    border-color: #83cbdb;
+    background: #1c1c1c;
+    box-shadow: 0 0 0 3px rgba(131, 203, 219, 0.1);
 }
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-    color: #94a3b8;
+    color: #1197c1;
 }
 
 .form-group textarea {
@@ -659,8 +682,8 @@ body {
 .submit-btn {
     width: 100%;
     padding: 16px 24px;
-    background: #64748b;
-    color: #ffffff;
+    background: #1197c1;
+    color: #f2f4f4;
     border: none;
     border-radius: 6px;
     font-size: 1rem;
@@ -669,16 +692,17 @@ body {
     transition: all 0.3s ease;
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 .submit-btn:hover {
-    background: #475569;
+    background: #1c1c1c;
     transform: translateY(-1px);
     box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
 /* Responsive Design */
+
 @media (max-width: 968px) {
     .container {
         padding: 0 30px;
@@ -710,10 +734,17 @@ body {
     
     .value-item {
         padding-left: 0;
+        padding-top: 80px;
     }
     
     .value-item::before {
         display: none;
+    }
+    
+    .testimonial-image {
+        left: 50%;
+        top: 10px;
+        transform: translateX(-50%);
     }
 }
 
@@ -766,7 +797,19 @@ body {
     
     .client-types {
         grid-template-columns: 1fr;
-        gap: 1px;
+        gap: 20px;
+    }
+    
+    .client-type {
+        padding: 30px 25px;
+    }
+    
+    .client-type h3 {
+        font-size: 1.3rem;
+    }
+    
+    .client-type p {
+        font-size: 1rem;
     }
     
     .contact-method {

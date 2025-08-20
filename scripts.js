@@ -43,14 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(card);
     });
 
-    // Observe client type cards for animation
-    const clientTypes = document.querySelectorAll('.client-type');
-    clientTypes.forEach((card, index) => {
-        card.style.opacity = '0';
-        card.style.transform = 'translateY(20px)';
-        card.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
-        observer.observe(card);
-    });
+    // Client cards will be handled by the carousel fade effects instead
 
     // Observe value items for animation
     const valueItems = document.querySelectorAll('.value-item');
@@ -164,6 +157,8 @@ document.addEventListener('DOMContentLoaded', function() {
             item.style.transform = 'translateX(0)';
         }, 500 + (index * 100));
     });
+
+    // Client cards will use simple grid layout - no special JavaScript needed
 
     console.log('Hornback Communications brochure loaded successfully');
 });
