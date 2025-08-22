@@ -160,5 +160,125 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Client cards will use simple grid layout - no special JavaScript needed
 
-    console.log('Hornback Communications brochure loaded successfully');
+
+    // Client Carousel Functionality (for Hybrid Showcase design)
+    const carousel = document.querySelector('.clients-track');
+    const slides = document.querySelectorAll('.client-slide');
+    const prevBtn = document.querySelector('.carousel-prev');
+    const nextBtn = document.querySelector('.carousel-next');
+    const dots = document.querySelectorAll('.carousel-dot');
+    const counter = document.querySelector('.carousel-counter');
+    
+    if (carousel && slides.length > 0) {
+        let currentSlide = 0;
+        const totalSlides = slides.length;
+        let autoplayInterval = null;
+        
+        function updateCarousel() {
+            // Ensure currentSlide is within bounds
+            currentSlide = Math.max(0, Math.min(currentSlide, totalSlides - 1));
+            
+            const translateX = -currentSlide * 100;
+            carousel.style.transform = `translateX(${translateX}%)`;
+            
+            // Update counter
+            if (counter) {
+                counter.textContent = `${currentSlide + 1} / ${totalSlides}`;
+            }
+            
+            // Update dots
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide);
+            });
+            
+            // Update button states
+            if (prevBtn) prevBtn.disabled = currentSlide === 0;
+            if (nextBtn) nextBtn.disabled = currentSlide === totalSlides - 1;
+        }
+        
+        function goToSlide(index) {
+            if (index >= 0 && index < totalSlides && index !== currentSlide) {
+                currentSlide = index;
+                updateCarousel();
+            }
+        }
+        
+        function nextSlide() {
+            goToSlide(currentSlide + 1);
+        }
+        
+        function prevSlide() {
+            goToSlide(currentSlide - 1);
+        }
+        
+        function stopAutoplay() {
+            if (autoplayInterval) {
+                clearInterval(autoplayInterval);
+                autoplayInterval = null;
+            }
+        }
+        
+        function startAutoplay() {
+            stopAutoplay(); // Clear any existing interval first
+            autoplayInterval = setInterval(() => {
+                if (currentSlide < totalSlides - 1) {
+                    nextSlide();
+                } else {
+                    goToSlide(0); // Loop back to first slide
+                }
+            }, 5000);
+        }
+        
+        // Event listeners
+        if (nextBtn) {
+            nextBtn.addEventListener('click', () => {
+                nextSlide();
+                stopAutoplay();
+                setTimeout(startAutoplay, 3000); // Restart autoplay after 3 seconds
+            });
+        }
+        
+        if (prevBtn) {
+            prevBtn.addEventListener('click', () => {
+                prevSlide();
+                stopAutoplay();
+                setTimeout(startAutoplay, 3000); // Restart autoplay after 3 seconds
+            });
+        }
+        
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                goToSlide(index);
+                stopAutoplay();
+                setTimeout(startAutoplay, 3000); // Restart autoplay after 3 seconds
+            });
+        });
+        
+        // Pause autoplay on hover
+        const carouselContainer = document.querySelector('.clients-carousel');
+        if (carouselContainer) {
+            carouselContainer.addEventListener('mouseenter', stopAutoplay);
+            carouselContainer.addEventListener('mouseleave', startAutoplay);
+        }
+        
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                prevSlide();
+                stopAutoplay();
+                setTimeout(startAutoplay, 3000);
+            } else if (e.key === 'ArrowRight') {
+                e.preventDefault();
+                nextSlide();
+                stopAutoplay();
+                setTimeout(startAutoplay, 3000);
+            }
+        });
+        
+        // Initialize carousel
+        updateCarousel();
+        startAutoplay();
+    }
+
 });
