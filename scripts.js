@@ -4,16 +4,28 @@
 // Wait for the DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
     
-    // Smooth scrolling for internal links
+    // Smooth scrolling for internal links with header offset
     const links = document.querySelectorAll('a[href^="#"]');
     links.forEach(link => {
         link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            
+            if (targetElement) {
+                e.preventDefault();
+                
+                // Get the exact position we want to scroll to
+                const elementRect = targetElement.getBoundingClientRect();
+                const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                const headerHeight = 70; // Navigation bar height
+                
+                // Calculate target position: current scroll + element position - header height
+                const targetScrollTop = currentScrollTop + elementRect.top - headerHeight;
+                
+                // Smooth scroll to target position
+                window.scrollTo({
+                    top: targetScrollTop,
+                    behavior: 'smooth'
                 });
             }
         });
